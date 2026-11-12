@@ -1,2 +1,2 @@
-const sections=[...document.querySelectorAll('section[id^="mission"]')];
-sections.forEach((section,i)=>{const nav=document.createElement('div');nav.className='step-controls';if(i>0){const a=document.createElement('a');a.href='#'+sections[i-1].id;a.textContent='← 이전 탐사';nav.append(a)}if(i<sections.length-1){const a=document.createElement('a');a.href='#'+sections[i+1].id;a.textContent='다음 탐사 →';nav.append(a)}section.append(nav)});
+const sections=[...document.querySelectorAll('section[id^="mission"], section#practice')];
+sections.forEach((section,i)=>{const nav=document.createElement('div');nav.className='step-controls';if(i>0){const a=document.createElement('a');a.href='#'+sections[i-1].id;a.textContent='← 이전 활동';nav.append(a)}if(i<sections.length-1){const a=document.createElement('a');a.href='#'+sections[i+1].id;a.textContent='다음 활동 →';nav.append(a)}section.append(nav)});
